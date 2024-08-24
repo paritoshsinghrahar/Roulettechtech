@@ -1,0 +1,59 @@
+body {
+	background: #141414;
+	color: #ffffff;
+}
+.movie-app {
+	display: flex;
+	flex-direction: row; /* Arrange columns side by side */
+	justify-content: space-between; /* Space evenly between columns */
+	align-items: flex-start; /* Align items to the top */
+	width: 100%;
+}
+
+.column1, .column2 {
+	flex: 1; /* Each column takes up equal space */
+	padding: 10px;
+}
+
+.column1 {
+	margin-right: 10px; /* Optional: Adds space between the columns */
+}
+
+.column2 {
+	margin-left: 10px; /* Optional: Adds space between the columns */
+}
+
+.row {
+	overflow-x: auto;
+}
+
+.image-container {
+
+	transition: transform 0.2s;
+	align-items: center; /* Center items horizontally */
+	justify-content: center;
+
+}
+
+.image-container:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+	opacity: 1;
+}
+
+.overlay {
+	position: absolute;
+	background: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	transition: 0.5s ease;
+	opacity: 0;
+	bottom: 0;
+	font-size: 20px;
+	padding: 20px;
+	text-align: center;
+}
+
+
